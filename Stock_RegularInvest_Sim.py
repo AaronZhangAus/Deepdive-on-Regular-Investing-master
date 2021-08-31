@@ -24,8 +24,6 @@ for stock_ticker in stock_list[1697:2000]:
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
     # exp1 = RegularInvest(weeks=52, stock="fb", invest_amount=100, beta=3000)
-    # exp1.populate_coin_price()
-    # exp1.populate_coin_price_with_sin()
 
     # assume the stock is valid
     valid_stock = True
@@ -39,8 +37,3 @@ for stock_ticker in stock_list[1697:2000]:
 
     exp1.reset()
 
-# sorted_stock_list = RegularInvest.sort_growth_rate()
-# print("TOP 30 HIGHEST GAIN STOCKS FOR REGULAR INVESTING:")
-# for i in sorted_stock_list[:30]:
-#     print(i['ticker'])
-#     print(i['growth_rate'])
