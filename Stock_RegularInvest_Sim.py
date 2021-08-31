@@ -21,6 +21,7 @@ stock_id = 0
 stock_list = read_all_stocks_price()
 # stock_list = ['ACGLP']
 
+# list of all cryto currency tickers
 cryto_list = [
     'BTC-USD',
     'ETH-USD',
