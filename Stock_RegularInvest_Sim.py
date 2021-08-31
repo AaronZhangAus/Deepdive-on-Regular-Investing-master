@@ -15,12 +15,42 @@ def read_all_stocks_price():
 
 
 stock_list = []
+stock_id = 0
 
 # read in all stock tickers
 stock_list = read_all_stocks_price()
 # stock_list = ['ACGLP']
 
-for stock_ticker in stock_list[2001:2500]:
+cryto_list = [
+    'BTC-USD',
+    'ETH-USD',
+    'ADA-USD',
+    'BNB-USD',
+    'USDT-USD',
+    'XRP-USD',
+    'HEX-USD',
+    'DOGE-USD',
+    'SOL1-USD',
+    'USDC-USD',
+    'DOT1-USD',
+    'UNI3-USD',
+    'LUNA1-USD',
+    'BCH-USD',
+    'LINK-USD',
+    'LTC-USD',
+    'ICP1-USD',
+    'MATIC-USD',
+    'ETC-USD',
+    'XLM-USD',
+    'VET-USD',
+    'AVAX-USD',
+    'FIL-USD',
+    'THETA-USD',
+    'TRX-USD'
+]
+
+for stock_ticker in stock_list[2461:3000]:
+    print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
     # exp1 = RegularInvest(weeks=52, stock="fb", invest_amount=100, beta=3000)
@@ -47,4 +77,4 @@ for stock_ticker in stock_list[2001:2500]:
 
     # clear all list
     exp1.reset()
-
+    stock_id = stock_id + 1
