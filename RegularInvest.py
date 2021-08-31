@@ -10,15 +10,21 @@ class RegularInvest:
 
     def __init__(self, weeks, stock, invest_amount, beta):
         # initial coin price on day 1 is 30000
-        self.coin_price = [30000]
         self.weeks = weeks
         self.stock = stock
         self.invest_amount = invest_amount
         self.beta = beta
+        self.coin_price = []
         self.investment = []
         self.owned_coins = []
         self.assets = []
         self.ri_records = []
+
+    def reset(self):
+        self.coin_price.clear()
+        self.investment.clear()
+        self.owned_coins.clear()
+        self.assets.clear()
 
     def random_populate_coin_price(self):
 
@@ -44,6 +50,7 @@ class RegularInvest:
 
     def populate_stock_price(self):
 
+        good_stock = True
         # retrieve weekly stock price for the last n weeks
         print("stock to extract:" + str(self.stock))
         print("number of weeks to extract:" + str(self.weeks))
@@ -63,6 +70,12 @@ class RegularInvest:
         # only pick the 1st self.weeks price, e.g. first 52nd weeks
         self.coin_price = weekly_price[0:self.weeks]
 
+        # if the stock price has less than 20 records, skip to next stock
+        if len(self.coin_price) <= 20:
+            print("Stock has less than 20 prices. Move to next one.")
+            good_stock = False
+            return good_stock
+
         # if stock price is less than self.weeks old, re-set self.weeks
         # to be earliest weeks available
         if len(self.coin_price) < self.weeks:
@@ -70,7 +83,7 @@ class RegularInvest:
 
         print("Weekly Price for " + self.stock)
         print(self.coin_price)
-        pass
+        return good_stock
 
     def populate_investment(self):
 
