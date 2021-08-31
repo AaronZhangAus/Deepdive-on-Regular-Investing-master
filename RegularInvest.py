@@ -174,6 +174,11 @@ class RegularInvest:
             "growth_rate": round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)
         }
         RegularInvest.ri_records.append(stock_rec)
+
+        #write stock_rec to a file
+        with open('records/' + self.stock + ".txt", 'w') as f:
+            for key, value in stock_rec.items():
+                f.write('%s:%s\n' % (key, value))
         pass
 
     @staticmethod
