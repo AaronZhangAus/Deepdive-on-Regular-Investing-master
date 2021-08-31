@@ -161,7 +161,7 @@ class RegularInvest:
         plt.tight_layout()
         # plt.show()
 
-        # clear the figure
+        # clear the figured
         plt.cla()
 
     def create_ri_records(self):
