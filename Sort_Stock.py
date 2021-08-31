@@ -37,6 +37,6 @@ read_stock_record()
 sorted_stock_records = sorted(stock_list, key=lambda k: k['growth_rate'],
                               reverse=True)
 
-print("TOP 50 HIGHEST GAIN STOCKS FOR REGULAR INVESTING:")
-for i in sorted_stock_records[:50]:
+print("TOP 30 HIGHEST GAIN STOCKS FOR REGULAR INVESTING:")
+for i in sorted_stock_records[:30]:
     print("%s returns %s" % (i['ticker'], i['growth_rate']))
