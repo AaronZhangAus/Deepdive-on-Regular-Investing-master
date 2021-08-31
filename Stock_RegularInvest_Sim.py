@@ -15,13 +15,15 @@ def read_all_stocks_price():
 
 
 stock_list = []
-stock_id = 0
+stock_id = 2917
 
 # read in all stock tickers
 stock_list = read_all_stocks_price()
 # stock_list = ['ACGLP']
 
 # list of all cryto currency tickers
+# simulation plot to save in cryto_stocks folder
+# stock records to save in cryto_records folder
 cryto_list = [
     'BTC-USD',
     'ETH-USD',
@@ -50,7 +52,7 @@ cryto_list = [
     'TRX-USD'
 ]
 
-for stock_ticker in stock_list[2461:3000]:
+for stock_ticker in stock_list[2917:3000]:
     print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
