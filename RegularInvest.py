@@ -28,7 +28,7 @@ class RegularInvest:
             daily = self.coin_price[w - 1] \
                     + up_down * random.randrange(0, self.beta)
             self.coin_price.append(daily)
-        print("Weekly Coin Price:")
+        print("Weekly Stock Price:")
         print(self.coin_price)
 
         pass
@@ -42,6 +42,7 @@ class RegularInvest:
         # plt.show()
 
     def populate_stock_price(self):
+
         # retrieve weekly stock price for the last n weeks
         print("stock to extract:" + str(self.stock))
         print("number of weeks to extract:" + str(self.weeks))
@@ -54,9 +55,13 @@ class RegularInvest:
 
         # extract weekly stock price from start_date_str
         data = web.get_data_yahoo(self.stock, start_date_str, interval='w')
+
+        # find the daily close price
         weekly_price = data["Close"].tolist()
-        # only read the 1st self.weeks price
+
+        # only pick the 1st self.weeks price, e.g. first 52nd weeks
         self.coin_price = weekly_price[0:self.weeks]
+
         print("Weekly Price for " + self.stock)
         print(self.coin_price)
         pass
@@ -83,7 +88,7 @@ class RegularInvest:
                 round(self.owned_coins[w - 1] + daily_earned_coin, 4)
                 * self.coin_price[w])
 
-        print("Total Owned Coins:")
+        print("Number of Shares Owned:")
         print(self.owned_coins)
 
         print("Total Assets:")
@@ -98,6 +103,8 @@ class RegularInvest:
                 "  Total Investment:" + str(round(self.investment[-1], 2)) + \
                 "  Gain:" + str(round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)) + "%"
         plt.title(title)
+
+        # set filename to be assets value and save in figures folder
         my_file = str(str(round(self.assets[-1], 2)))
         plt.savefig('figures/' + my_file + ".png")
         # plt.show()
@@ -111,14 +118,18 @@ class RegularInvest:
                 "  Gain:" + str(round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)) + "%"
 
         # 1st plot to show stock price
-        plt.subplot(2, 1, 1)
+        plt.subplot(3, 1, 1)
         plt.title(title)
         plt.plot(range(0, self.weeks), self.coin_price)
 
         # 2nd plot to show regular investment
-        plt.subplot(2, 1, 2)
+        plt.subplot(3, 1, 2)
         plt.plot(range(0, self.weeks), self.investment)
         plt.plot(range(0, self.weeks), self.assets)
+
+        # 3rd plot to show number of shares owned
+        plt.subplot(3, 1, 3)
+        plt.plot(range(0, self.weeks), self.owned_coins)
 
         # save the figures as stock_name.png in stocks folder
         plt.savefig('stocks/' + self.stock + ".png")
