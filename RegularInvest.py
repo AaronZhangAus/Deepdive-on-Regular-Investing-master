@@ -7,6 +7,8 @@ import datetime
 
 
 class RegularInvest:
+    # class-level list to store regular investing records
+    ri_records = []
 
     def __init__(self, weeks, stock, invest_amount, beta):
         # initial coin price on day 1 is 30000
@@ -18,7 +20,6 @@ class RegularInvest:
         self.investment = []
         self.owned_coins = []
         self.assets = []
-        self.ri_records = []
 
     def reset(self):
         self.coin_price.clear()
@@ -165,5 +166,22 @@ class RegularInvest:
         plt.cla()
 
     def create_ri_records(self):
+        stock_rec = {
+            "ticker": self.stock,
+            "price": list(self.coin_price),
+            "assets": list(self.assets),
+            "shares": list(self.owned_coins),
+            "growth_rate": round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)
+        }
+        RegularInvest.ri_records.append(stock_rec)
+        pass
 
+    @staticmethod
+    def sort_growth_rate():
+        print("sorting all stocks by growth rate...")
+        print("This is all records:")
+        print(RegularInvest.ri_records)
+        sorted_ri_records = sorted(RegularInvest.ri_records, key=lambda k: k['growth_rate'],
+                                   reverse=True)
+        return sorted_ri_records
         pass
