@@ -18,6 +18,7 @@ class RegularInvest:
         self.investment = []
         self.owned_coins = []
         self.assets = []
+        self.ri_records = []
 
     def random_populate_coin_price(self):
 
@@ -85,7 +86,6 @@ class RegularInvest:
         self.owned_coins = [0]
         self.assets = [0]
         for w in range(1, self.weeks):
-            print("~~~~~~i am w:" + str(w))
             daily_earned_coin = self.invest_amount / self.coin_price[w]
 
             self.owned_coins.append(
@@ -124,7 +124,7 @@ class RegularInvest:
                 "  Gain:" + str(round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)) + "%"
 
         # 1st plot to show stock price
-        plt.figure(figsize=(6, 8))
+        plt.figure(figsize=(6, 9))
         plt.subplot(3, 1, 1)
         plt.title(title)
         plt.plot(range(0, self.weeks), self.coin_price)
@@ -146,7 +146,11 @@ class RegularInvest:
         # save the figures as stock_name.png in stocks folder
         plt.savefig('stocks/' + self.stock + ".png")
         plt.tight_layout()
-        plt.show()
+        # plt.show()
 
         # clear the figure
         plt.cla()
+
+    def create_ri_records(self):
+
+        pass
