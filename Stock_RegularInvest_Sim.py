@@ -29,11 +29,22 @@ for stock_ticker in stock_list[2001:2500]:
     valid_stock = True
 
     valid_stock = exp1.populate_stock_price()
+    # valid_stock is false when records are less than 20
+
+    # for valid stock
     if valid_stock:
+        # calculate the investment list
         exp1.populate_investment()
+
+        # calculate number of shares purchased over time as well as assets
         exp1.populate_owned_coins()
+
+        # plot the stock price, investment vs assets and number of shares
         exp1.plot_stock_and_result()
+
+        # store the results to a file as stock_name.txt in records folder
         exp1.create_ri_records()
 
+    # clear all list
     exp1.reset()
 
