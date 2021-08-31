@@ -20,7 +20,8 @@ stock_list = []
 stock_list = read_all_stocks_price()
 # stock_list = ['ACGLP']
 
-for stock_ticker in stock_list[:300]:
+for stock_ticker in stock_list[1254:2000]:
+    print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
     # exp1 = RegularInvest(weeks=52, stock="fb", invest_amount=100, beta=3000)
     # exp1.populate_coin_price()
