@@ -1,6 +1,9 @@
 import glob
 import os
 
+# this script reads in stock records from the folder below, sort them by
+# growth rate and print the top 30 with highest growth rate
+
 # read stock records from folder
 folder_path = "records"
 
