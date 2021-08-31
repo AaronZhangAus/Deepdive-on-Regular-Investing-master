@@ -62,6 +62,11 @@ class RegularInvest:
         # only pick the 1st self.weeks price, e.g. first 52nd weeks
         self.coin_price = weekly_price[0:self.weeks]
 
+        # if stock price is less than self.weeks old, re-set self.weeks
+        # to be earliest weeks available
+        if len(self.coin_price) < self.weeks:
+            self.weeks = len(self.coin_price)
+
         print("Weekly Price for " + self.stock)
         print(self.coin_price)
         pass
@@ -80,6 +85,7 @@ class RegularInvest:
         self.owned_coins = [0]
         self.assets = [0]
         for w in range(1, self.weeks):
+            print("~~~~~~i am w:"+str(w))
             daily_earned_coin = self.invest_amount / self.coin_price[w]
 
             self.owned_coins.append(
@@ -124,11 +130,13 @@ class RegularInvest:
 
         # 2nd plot to show regular investment
         plt.subplot(3, 1, 2)
+        plt.title("Actual Investment vs. Assets")
         plt.plot(range(0, self.weeks), self.investment)
         plt.plot(range(0, self.weeks), self.assets)
 
         # 3rd plot to show number of shares owned
         plt.subplot(3, 1, 3)
+        plt.title("Number of Shares Owned")
         plt.plot(range(0, self.weeks), self.owned_coins)
 
         # save the figures as stock_name.png in stocks folder
