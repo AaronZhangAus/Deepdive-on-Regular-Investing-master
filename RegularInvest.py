@@ -43,9 +43,9 @@ class RegularInvest:
 
     def populate_coin_price_with_sin(self):
 
-        x_values = np.arange(0, 3.14, 3.14 / self.weeks)
+        x_values = np.arange(0, 3.14*2, 3.14*2 / self.weeks)
         templist = np.sin(x_values)
-        self.coin_price = [30000 + i * 15000 for i in templist]
+        self.coin_price = [30000 - abs(i) * 15000 for i in templist]
         # plt.plot(x_values,self.coin_price)
         # plt.show()
 
@@ -126,8 +126,8 @@ class RegularInvest:
 
         # set filename to be assets value and save in figures folder
         my_file = str(str(round(self.assets[-1], 2)))
-        plt.savefig('figures/' + my_file + ".png")
-        # plt.show()
+        plt.savefig('figures2/' + my_file + ".png")
+        plt.show()
         # clear the figure
         plt.cla()
 
