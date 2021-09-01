@@ -64,7 +64,7 @@ stock_list = crypto_list #test all crytos
 # stock_list = ['fb'] test individual stock
 
 
-for stock_ticker in stock_list[4962:]:
+for stock_ticker in stock_list:
     print(stock_list.index(stock_ticker))
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)

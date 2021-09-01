@@ -158,7 +158,7 @@ class RegularInvest:
         plt.grid()
 
         # save the figures as stock_name.png in stocks folder
-        plt.savefig('stocks/' + self.stock + ".png")
+        plt.savefig('crypto_stocks/' + self.stock + ".png")
         plt.tight_layout()
         # plt.show()
 
@@ -176,7 +176,7 @@ class RegularInvest:
         RegularInvest.ri_records.append(stock_rec)
 
         #write stock_rec to a file
-        with open('records/' + self.stock + ".txt", 'w') as f:
+        with open('crypto_records/' + self.stock + ".txt", 'w') as f:
             for key, value in stock_rec.items():
                 f.write('%s:%s\n' % (key, value))
         pass
