@@ -43,9 +43,11 @@ class RegularInvest:
 
     def populate_coin_price_with_sin(self):
 
-        x_values = np.arange(0, 3.14*2, 3.14*2 / self.weeks)
+        x_values = np.arange(0, 3.14 * 2+0.001, 3.14 * 2 / (self.weeks-1))
         templist = np.sin(x_values)
         self.coin_price = [30000 - abs(i) * 15000 for i in templist]
+        akk = np.arange(start=0, stop=10, step=0.5)
+        print(akk)
         # plt.plot(x_values,self.coin_price)
         # plt.show()
 
@@ -175,7 +177,7 @@ class RegularInvest:
         }
         RegularInvest.ri_records.append(stock_rec)
 
-        #write stock_rec to a file
+        # write stock_rec to a file
         with open('ETF_records/' + self.stock + ".txt", 'w') as f:
             for key, value in stock_rec.items():
                 f.write('%s:%s\n' % (key, value))
