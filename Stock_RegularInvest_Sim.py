@@ -15,7 +15,7 @@ def read_all_stocks_price():
 
 
 stock_list = []
-stock_id = 3822
+stock_id = 4000
 
 # read in all stock tickers
 stock_list = read_all_stocks_price()
@@ -52,7 +52,7 @@ cryto_list = [
     'TRX-USD'
 ]
 
-for stock_ticker in stock_list[3822:4000]:
+for stock_ticker in stock_list[4000:4500]:
     print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
