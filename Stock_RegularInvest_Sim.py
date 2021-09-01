@@ -52,7 +52,7 @@ cryto_list = [
     'TRX-USD'
 ]
 
-for stock_ticker in stock_list[3437:3500]:
+for stock_ticker in stock_list[3501:4000]:
     print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
