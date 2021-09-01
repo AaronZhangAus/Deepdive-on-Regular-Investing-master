@@ -24,12 +24,12 @@ def read_all_stocks_price():
 
 
 stock_list = []
-stock_id = 4811
+stock_id =0
 
 # list of all cryto currency tickers
 # simulation plot to save in cryto_stocks folder
 # stock records to save in cryto_records folder
-cryto_list = [
+crypto_list = [
     'BTC-USD',
     'ETH-USD',
     'ADA-USD',
@@ -58,14 +58,14 @@ cryto_list = [
 ]
 
 
-stock_list = read_all_stocks_price() # test all stocks in Nasdaq
+#stock_list = read_all_stocks_price() # test all stocks in Nasdaq
 # stock_list = read_all_ETFs() test all ETFs in Nasdaq
-# stock_list = crypto_list test all crytos
+stock_list = crypto_list #test all crytos
 # stock_list = ['fb'] test individual stock
 
 
 for stock_ticker in stock_list[4962:]:
-    print(stock_id)
+    print(stock_list.index(stock_ticker))
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
     # exp1 = RegularInvest(weeks=52, stock="fb", invest_amount=100, beta=3000)
