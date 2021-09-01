@@ -5,7 +5,7 @@ import os
 # growth rate and print the top 30 with highest growth rate
 
 # read stock records from folder
-folder_path = "records"
+folder_path = "ETF_records"
 
 # store all stock to a list
 stock_list = []
