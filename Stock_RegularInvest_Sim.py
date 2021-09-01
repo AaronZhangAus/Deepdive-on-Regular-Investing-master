@@ -64,7 +64,7 @@ stock_list = read_all_stocks_price() # test all stocks in Nasdaq
 # stock_list = ['fb'] test individual stock
 
 
-for stock_ticker in stock_list[4811:]:
+for stock_ticker in stock_list[4962:]:
     print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
