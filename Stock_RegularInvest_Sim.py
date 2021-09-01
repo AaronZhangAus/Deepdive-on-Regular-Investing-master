@@ -26,10 +26,6 @@ def read_all_stocks_price():
 stock_list = []
 stock_id = 4811
 
-# read in all stock tickers
-stock_list = read_all_stocks_price()
-# stock_list = ['fb'] use this line to test individual stock
-
 # list of all cryto currency tickers
 # simulation plot to save in cryto_stocks folder
 # stock records to save in cryto_records folder
@@ -61,8 +57,12 @@ cryto_list = [
     'TRX-USD'
 ]
 
-# list of all ETFs tickers
-ETF_list = read_all_ETFs()
+
+stock_list = read_all_stocks_price() # test all stocks in Nasdaq
+# stock_list = read_all_ETFs() test all ETFs in Nasdaq
+# stock_list = crypto_list test all crytos
+# stock_list = ['fb'] test individual stock
+
 
 for stock_ticker in stock_list[4811:]:
     print(stock_id)
