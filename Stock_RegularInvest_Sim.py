@@ -2,11 +2,14 @@ from RegularInvest import RegularInvest
 import pandas_datareader.data as web
 import pandas as pd
 from yahoo_fin import stock_info as si
-
+import csv
 
 def read_all_ETFs():
     # read ETF tickers from ETFs.csv
-    full_list = []
+    with open('ETFs.csv', newline='') as f:
+        reader = csv.reader(f)
+        full_list = list(reader)
+        print(full_list)
     return full_list
 
 
@@ -21,7 +24,7 @@ def read_all_stocks_price():
 
 
 stock_list = []
-stock_id = 4402
+stock_id = 4635
 
 # read in all stock tickers
 stock_list = read_all_stocks_price()
@@ -61,7 +64,7 @@ cryto_list = [
 # list of all ETFs tickers
 ETF_list = read_all_ETFs()
 
-for stock_ticker in stock_list[4500:]:
+for stock_ticker in stock_list[4635:]:
     print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
