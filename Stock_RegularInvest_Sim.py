@@ -7,7 +7,7 @@ import csv
 
 def read_all_ETFs():
     # read ETF tickers from ETFs.csv
-    with open('ETFs_hcare.csv', newline='') as f:
+    with open('ETFs_fin.csv', newline='') as f:
         reader = [i[0] for i in csv.reader(f)]
         full_list = list(reader)
         print(full_list)
