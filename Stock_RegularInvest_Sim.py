@@ -4,6 +4,12 @@ import pandas as pd
 from yahoo_fin import stock_info as si
 
 
+def read_all_ETFs():
+    # read ETF tickers from ETFs.csv
+    full_list = []
+    return full_list
+
+
 def read_all_stocks_price():
     # read in all stock price in nasdaq
     df1 = pd.DataFrame(si.tickers_nasdaq())
@@ -19,7 +25,7 @@ stock_id = 4402
 
 # read in all stock tickers
 stock_list = read_all_stocks_price()
-# stock_list = ['ACGLP']
+# stock_list = ['fb'] use this line to test individual stock
 
 # list of all cryto currency tickers
 # simulation plot to save in cryto_stocks folder
@@ -52,7 +58,10 @@ cryto_list = [
     'TRX-USD'
 ]
 
-for stock_ticker in stock_list[4402:4500]:
+# list of all ETFs tickers
+ETF_list = read_all_ETFs()
+
+for stock_ticker in stock_list[4500:]:
     print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
