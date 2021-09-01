@@ -7,7 +7,7 @@ import csv
 
 def read_all_ETFs():
     # read ETF tickers from ETFs.csv
-    with open('ETFs.csv', newline='') as f:
+    with open('ETFs2.csv', newline='') as f:
         reader = [i[0] for i in csv.reader(f)]
         full_list = list(reader)
         print(full_list)
@@ -64,7 +64,7 @@ stock_list = read_all_ETFs()  # test all ETFs in Nasdaq
 # stock_list = ['fb'] test individual stock
 
 
-for stock_ticker in stock_list[73:]:
+for stock_ticker in stock_list:
     print(stock_list.index(stock_ticker))
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
