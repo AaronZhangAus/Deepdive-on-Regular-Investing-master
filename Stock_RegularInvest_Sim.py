@@ -24,7 +24,7 @@ def read_all_stocks_price():
 
 
 stock_list = []
-stock_id = 4635
+stock_id = 4811
 
 # read in all stock tickers
 stock_list = read_all_stocks_price()
@@ -64,7 +64,7 @@ cryto_list = [
 # list of all ETFs tickers
 ETF_list = read_all_ETFs()
 
-for stock_ticker in stock_list[4635:]:
+for stock_ticker in stock_list[4811:]:
     print(stock_id)
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
