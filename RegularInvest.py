@@ -48,7 +48,7 @@ class RegularInvest:
                              3.14 * cycles / (self.weeks - 1))
 
         # calculate the sin value for each time point
-        templist = np.sin(x_values)
+        templist = np.cos(x_values)
 
         # calculate coin price for each time point
         self.coin_price = [30000 - abs(i) * 15000 for i in templist]
@@ -148,7 +148,7 @@ class RegularInvest:
         my_file = str(str(round(self.assets[-1], 2)))
         #plt.savefig('figures2/' + my_file + ".png")
         plt.tight_layout()
-        plt.savefig('cycle_test/' + str(cycles) + ".png")
+        plt.savefig('cycle_test2/' + str(cycles) + ".png")
         #plt.show()
         # clear the figure
         #plt.cla()
