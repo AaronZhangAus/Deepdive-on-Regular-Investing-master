@@ -119,21 +119,38 @@ class RegularInvest:
         print(self.assets)
 
     def plot_result(self):
-        plt.plot(range(0, self.weeks), self.coin_price)
-        plt.plot(range(0, self.weeks), self.investment)
-        plt.plot(range(0, self.weeks), self.assets)
 
         title = self.stock + " Total Assets:" + str(round(self.assets[-1], 2)) + \
-                "  Total Investment:" + str(round(self.investment[-1], 2)) + \
-                "  Gain:" + str(round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)) + "%"
+                 "  Total Investment:" + str(round(self.investment[-1], 2)) + \
+                 "  Gain:" + str(round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)) + "%"
+
+        # 1st plot to show stock price
+        plt.figure(figsize=(6, 8))
+        plt.subplot(3, 1, 1)
         plt.title(title)
+        plt.plot(range(0, self.weeks), self.coin_price)
+        plt.grid()
+
+        # 2nd plot to show regular investment
+        plt.subplot(3, 1, 2)
+        plt.title("Actual Investment vs. Assets")
+        plt.plot(range(0, self.weeks), self.investment)
+        plt.plot(range(0, self.weeks), self.assets)
+        plt.grid()
+
+        # 3rd plot to show number of shares owned
+        plt.subplot(3, 1, 3)
+        plt.title("Number of Shares Owned")
+        plt.plot(range(0, self.weeks), self.owned_coins)
+        plt.grid()
 
         # set filename to be assets value and save in figures folder
         my_file = str(str(round(self.assets[-1], 2)))
         plt.savefig('figures2/' + my_file + ".png")
+        plt.tight_layout()
         plt.show()
         # clear the figure
-        plt.cla()
+        #plt.cla()
 
     def plot_stock_and_result(self):
 
