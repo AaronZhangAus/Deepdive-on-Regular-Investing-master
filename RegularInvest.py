@@ -41,10 +41,16 @@ class RegularInvest:
 
         pass
 
-    def populate_coin_price_with_sin(self):
+    def populate_coin_price_with_sin(self, cycles):
 
-        x_values = np.arange(0, 3.14 * 2+0.001, 3.14 * 2 / (self.weeks-1))
+        # generate self.weeks number of time point during the period
+        x_values = np.arange(0, 3.14 * cycles + 0.0001,
+                             3.14 * cycles / (self.weeks - 1))
+
+        # calculate the sin value for each time point
         templist = np.sin(x_values)
+
+        # calculate coin price for each time point
         self.coin_price = [30000 - abs(i) * 15000 for i in templist]
 
     def populate_stock_price(self):
