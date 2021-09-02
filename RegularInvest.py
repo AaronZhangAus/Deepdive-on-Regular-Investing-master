@@ -51,7 +51,7 @@ class RegularInvest:
         templist = np.sin(x_values)
 
         # calculate coin price for each time point
-        self.coin_price = [30000 - abs(i) * 15000 for i in templist]
+        self.coin_price = [30000 + abs(i) * 15000 for i in templist]
 
     def populate_stock_price(self):
 
@@ -148,7 +148,7 @@ class RegularInvest:
         my_file = str(str(round(self.assets[-1], 2)))
         #plt.savefig('figures2/' + my_file + ".png")
         plt.tight_layout()
-        plt.savefig('cycle_test_26weeks/' + str(cycles) + ".png")
+        plt.savefig('cycle_test_52weeks_reverse/' + str(cycles) + ".png")
         #plt.show()
         # clear the figure
         #plt.cla()
