@@ -118,7 +118,7 @@ class RegularInvest:
         print("Total Assets:")
         print(self.assets)
 
-    def plot_result(self):
+    def plot_result(self,cycles):
 
         title = self.stock + " Total Assets:" + str(round(self.assets[-1], 2)) + \
                  "  Total Investment:" + str(round(self.investment[-1], 2)) + \
@@ -146,9 +146,10 @@ class RegularInvest:
 
         # set filename to be assets value and save in figures folder
         my_file = str(str(round(self.assets[-1], 2)))
-        plt.savefig('figures2/' + my_file + ".png")
+        #plt.savefig('figures2/' + my_file + ".png")
         plt.tight_layout()
-        plt.show()
+        plt.savefig('cycle_test/' + str(cycles) + ".png")
+        #plt.show()
         # clear the figure
         #plt.cla()
 
