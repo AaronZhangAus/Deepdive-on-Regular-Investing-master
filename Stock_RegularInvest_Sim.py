@@ -59,12 +59,12 @@ crypto_list = [
 ]
 
 # stock_list = read_all_stocks_price() # test all stocks in Nasdaq
-stock_list = read_all_ETFs()  # test all ETFs in Nasdaq
+#stock_list = read_all_ETFs()  # test all ETFs in Nasdaq
 # stock_list = crypto_list #test all crytos
-# stock_list = ['fb'] test individual stock
+stock_list = ['FNILX'] #test individual stock
 
 
-for stock_ticker in stock_list[17:]:
+for stock_ticker in stock_list:
     print(stock_list.index(stock_ticker))
     print(stock_ticker)
     exp1 = RegularInvest(weeks=52, stock=stock_ticker, invest_amount=100, beta=3000)
