@@ -61,7 +61,7 @@ crypto_list = [
 # stock_list = read_all_stocks_price() # test all stocks in Nasdaq
 #stock_list = read_all_ETFs()  # test all ETFs in Nasdaq
 # stock_list = crypto_list #test all crytos
-stock_list = ['GBUG'] #test individual stock
+stock_list = ['KARS'] #test individual stock
 
 
 for stock_ticker in stock_list:
