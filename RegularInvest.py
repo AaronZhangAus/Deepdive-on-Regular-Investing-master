@@ -20,6 +20,7 @@ class RegularInvest:
         self.investment = []
         self.owned_coins = []
         self.assets = []
+        self.gains = []
 
     def reset(self):
         self.coin_price.clear()
@@ -51,7 +52,7 @@ class RegularInvest:
         templist = np.sin(x_values)
 
         # calculate coin price for each time point
-        self.coin_price = [30000 + abs(i) * 15000 for i in templist]
+        self.coin_price = [30000 - abs(i) * 10000 for i in templist]
 
     def populate_stock_price(self):
 
@@ -103,14 +104,23 @@ class RegularInvest:
 
         self.owned_coins = [0]
         self.assets = [0]
+        self.gains = [0]
+
         for w in range(1, self.weeks):
+
+            # calculate number of coins newly earned
             daily_earned_coin = self.invest_amount / self.coin_price[w]
 
             self.owned_coins.append(
                 round(self.owned_coins[w - 1] + daily_earned_coin, 4))
-            self.assets.append(
-                round(self.owned_coins[w - 1] + daily_earned_coin, 4)
-                * self.coin_price[w])
+
+            daily_assets = round(self.owned_coins[w - 1] + daily_earned_coin, 4) \
+                           * self.coin_price[w]
+            self.assets.append(daily_assets)
+
+            # calculate the achieved percentage gain
+            self.gains.append((daily_assets - self.investment[w])
+                              / self.investment[w]*100)
 
         print("Number of Shares Owned:")
         print(self.owned_coins)
@@ -118,40 +128,48 @@ class RegularInvest:
         print("Total Assets:")
         print(self.assets)
 
-    def plot_result(self,cycles):
+    def plot_result(self, cycles):
 
         title = self.stock + " Total Assets:" + str(round(self.assets[-1], 2)) + \
-                 "  Total Investment:" + str(round(self.investment[-1], 2)) + \
-                 "  Gain:" + str(round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)) + "%"
+                "  Total Investment:" + str(round(self.investment[-1], 2)) + \
+                "  Gain:" + str(round((self.assets[-1] - self.investment[-1]) / self.investment[-1] * 100, 2)) + "%"
 
         # 1st plot to show stock price
         plt.figure(figsize=(6, 8))
-        plt.subplot(3, 1, 1)
+        plt.subplot(4, 1, 1)
         plt.title(title)
         plt.plot(range(0, self.weeks), self.coin_price)
         plt.grid()
 
         # 2nd plot to show regular investment
-        plt.subplot(3, 1, 2)
+        plt.subplot(4, 1, 2)
         plt.title("Actual Investment vs. Assets")
         plt.plot(range(0, self.weeks), self.investment)
         plt.plot(range(0, self.weeks), self.assets)
         plt.grid()
 
         # 3rd plot to show number of shares owned
-        plt.subplot(3, 1, 3)
+        plt.subplot(4, 1, 3)
         plt.title("Number of Shares Owned")
         plt.plot(range(0, self.weeks), self.owned_coins)
         plt.grid()
 
+        # 4th plot to show the gain list
+        plt.subplot(4, 1, 4)
+        plt.title("Weekly Asset Gain (%)")
+        plt.plot(range(0, self.weeks), self.gains)
+        # draw a horizontal line at y=0
+        plt.axhline(y=0, color='r', linestyle='--')
+        plt.grid()
+
         # set filename to be assets value and save in figures folder
         my_file = str(str(round(self.assets[-1], 2)))
-        #plt.savefig('figures2/' + my_file + ".png")
+        # plt.savefig('figures2/' + my_file + ".png")
         plt.tight_layout()
-        plt.savefig('cycle_test_52weeks_reverse/' + str(cycles) + ".png")
-        #plt.show()
+        plt.savefig('cycle_test_52weeks_10000/' + str(cycles) + ".png")
+        # plt.show()
         # clear the figure
-        #plt.cla()
+        # plt.cla()
 
     def plot_stock_and_result(self):
 
@@ -180,8 +198,8 @@ class RegularInvest:
         plt.grid()
 
         # save the figures as stock_name.png in stocks folder
-        plt.savefig('ETF_stocks/' + self.stock + ".png")
         plt.tight_layout()
+        plt.savefig('stocks/' + self.stock + ".png")
         # plt.show()
 
         # clear the figured
@@ -198,7 +216,7 @@ class RegularInvest:
         RegularInvest.ri_records.append(stock_rec)
 
         # write stock_rec to a file
-        with open('ETF_records/' + self.stock + ".txt", 'w') as f:
+        with open('records/' + self.stock + ".txt", 'w') as f:
             for key, value in stock_rec.items():
                 f.write('%s:%s\n' % (key, value))
         pass
