@@ -4,7 +4,7 @@
 下面这张图多次出现在笑来老师的课程中，它清晰展示了在一个大周期过程中，（价格【蓝色线】先跌后涨，呈现一个微笑型，称为一个大周期）投资总额与资产净值的变化情况。
 多次看到这幅图后，我想进一步了解投资总额与资产净值在其它走势中的变化----好奇定投策略在各种各样的走势中如何表现，成为了这篇实验笔记的缘起。
 
- ![]<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/xiaolai_graph.jpg" width="550" height="300">
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/xiaolai_graph.jpg" width="550" height="300">
 
 ## 实验方法/工具
 实验使用Python 代码生成一段时期的标的价格，假设每周投资一个定值，计算出每周的投资总额及资产净值，最后将价格，投资总额，资产净值三条线同时画出。
@@ -54,31 +54,20 @@ c.	标第价格不变时，有没有一个最优的定投值和频率的组合�
 6.	这两个实验带来的另一个重要启示是，定投策略绝非万能，如果所选标的基本面表现不良，颓势已定，或是整体行业缩水萎缩，定投策略最多能够减少损失，不会带来收益。同时也现侧面验证了坚信标的能够长期稳步增长这样的信念，是定投策略发挥效力的底层根基。
 
 #### 先涨后跌
-
-
-
-
-
-
-
-
-
-观察与思考：
+<p float="left">
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/5451.47.png" width="400" height="280"> 
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/4944.27.png" width="400" height="280">
+</p>
+#### 观察与思考：
 1.	首先从整体来观察，两个标的都表现出大幅下跌，第一个跌至几乎一半的价格，止于15000左右；第二个也表现出大致30%的下滑，停在了20000左右。与此同时，定投52周后，两个实验中的净资产也有较大的折损。比较起来，第一个实验中标的价格下跌近50%，定投亏损35.26%；第二实验价格下跌了三分之一左右（10000），定投亏损35.07%。这样的结果，二次验证了定投策略的降损能力，虽然无法完全止损，但是与上一次实验所示，当标的价格大幅走低时，定投的确能够不同程度地降低资产损失。
 2.	接下来关注局部变化。两个实验中，由于在前15周内，所持股（币）数量很小，因此在价格上扬或下降时，资产受到很小的影响。两幅图中，将近30周时资产才最后无法抵抗价格的继续下滑，开始走低于投资值，随着价格的持续下潜，资产也加剧贬值。与投资额差距逐渐拉大的另一个原因，是越往后期，持股（币）数逐渐增加，这样对价格的变动反应会越加敏感。
-
  
 #### 先跌后涨
-
-
-
-
-
-
-
-
-
-观察与思考：
+<p float="left">
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/5451.47.png" width="400" height="280"> 
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/4944.27.png" width="400" height="280">
+</p>
+#### 观察与思考：
 1.	在讨论上面的二幅图以前，再观察一下在开篇部分引用的笑来老师的这幅图（如下）。
  
 
@@ -88,16 +77,11 @@ c.	标第价格不变时，有没有一个最优的定投值和频率的组合�
 5.	第一个实验在30周左右资产走势呈现出了洼地，第二个实验洼地也出现在20周左右。但是也是在资产洼地中（价格几近最低点），股（币）数实现了快速积累，资产洼地成为了随后快速增长的续力区，有如是跃起前做的深蹲起。
 
 #### 锯齿型
-
-
-
-
-
-
-
-
-
-观察与思考：
+<p float="left">
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/5451.47.png" width="400" height="280"> 
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/4944.27.png" width="400" height="280">
+</p>
+#### 观察与思考：
 1.	两个实验中的标的价格波动频繁，呈锯齿状，绿色的资产净值在前半程几乎与投资金额没有差别，第一个实验中出现在3-4周时的价格下沉和12周时的上扬几乎对资产没有任何影响，原因很简单，前期的持股（币）数量很低。
 2.	在两个实验的后半程，随着持股（币）数的累积，资产净值开始对价格走势愈发敏感，价格的升降开始在资产净值上带来波动。尤其是第二个实验在36周左右出现了最大幅的下跌，同时也带来了同时期资产的走低，但是幅度比价格下降幅度要小。
 3.	52周后，第一个实验中经历了一系列的价格颠簸，资产净值稍低于投资金额 （-5.04%）; 值得一提的是第二个实验中，价格虽然没有恢复到原有价格（30000），但是资产净值仍然高于投资金额11.93%，这无疑地表明，对波动频繁的标的实施定投策略时，只要经过一段时期的持股（币）数积累，资产会对价格走势非常敏感----价格上涨，净值上升; 价格下探，净值也会下滑。换句话讲，只要标的价格长期看处于上扬，中前期的价格颠簸对后期盈亏影响不大。再一次印证笑来老师所说，标的的选择的确非常非常重要。
