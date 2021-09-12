@@ -3,6 +3,7 @@
 ## 缘起
 下面这张图多次出现在笑来老师的课程中，它清晰展示了在一个大周期过程中，（价格【蓝色线】先跌后涨，呈现一个微笑型，称为一个大周期）投资总额与资产净值的变化情况。
 多次看到这幅图后，我想进一步了解投资总额与资产净值在其它走势中的变化----好奇定投策略在各种各样的走势中如何表现，成为了这篇实验笔记的缘起。
+![Investment vs Asset](https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/xiaolai_graph.jpg)
  
 
 ## 实验方法/工具
