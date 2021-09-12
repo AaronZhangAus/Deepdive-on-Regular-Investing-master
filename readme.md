@@ -68,6 +68,7 @@ c.	标第价格不变时，有没有一个最优的定投值和频率的组合�
 <img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/5451.47.png" width="400" height="280"> 
 <img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/4944.27.png" width="400" height="280">
 </p>
+
 #### 观察与思考：
 1.	在讨论上面的二幅图以前，再观察一下在开篇部分引用的笑来老师的这幅图（如下）。
  
