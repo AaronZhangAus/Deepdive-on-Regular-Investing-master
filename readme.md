@@ -139,15 +139,15 @@ o	锯齿型
  
 ## 第三部分：实际标的走势
 ### ETFs:
-	Bitcoin
-	QQQ
-	银行股
-	锂电股
+#### Bitcoin
+#### QQQ
+#### 银行股
+#### 锂电股
 ### 公司股：
-	Facebook
-	Costco
-	Nvidia
-	McDonald’s
+#### Facebook
+#### Costco
+#### Nvidia
+#### McDonald’s
 ## 总结
 ## 后续工作
 ## 代码：https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master
