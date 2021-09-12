@@ -1,16 +1,4 @@
-# Deep-dive on regular investing
-abca
-asdfsafd
-
-asdfsadfasfasf
-
-safdsaf
-
-update test abca abcab - typed on local pycharm
-
-www abc abc
-
-一根韭菜的定投实验笔记
+# 一根韭菜的定投实验笔记
 
 缘起
 下面这张图多次出现在笑来老师的课程中，它清晰展示了在一个大周期过程中，（价格【蓝色线】先跌后涨，呈现一个微笑型，称为一个大周期）投资总额与资产净值的变化情况。
