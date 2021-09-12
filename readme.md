@@ -4,7 +4,7 @@
 下面这张图多次出现在笑来老师的课程中，它清晰展示了在一个大周期过程中，（价格【蓝色线】先跌后涨，呈现一个微笑型，称为一个大周期）投资总额与资产净值的变化情况。
 多次看到这幅图后，我想进一步了解投资总额与资产净值在其它走势中的变化----好奇定投策略在各种各样的走势中如何表现，成为了这篇实验笔记的缘起。
 
- ![test image size]<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/xiaolai_graph.jpg" width="550" height="300">
+ ![]<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/xiaolai_graph.jpg" width="550" height="300">
 
 ## 实验方法/工具
 实验使用Python 代码生成一段时期的标的价格，假设每周投资一个定值，计算出每周的投资总额及资产净值，最后将价格，投资总额，资产净值三条线同时画出。
@@ -20,12 +20,10 @@ Python 3.9
 ### 第一部分：五种特定走势
 #### 持续上涨
 
-
-
-![Investment vs Asset](https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/figures/7402.37.png | width=250)
-
-![Investment vs Asset](https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/8917.24.png | width=250)
-
+<p float="left">
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/figures/7402.37.png" width="400" height="280"> 
+<img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/8917.24.png" width="400" height="280">
+</p> 
 
 
 以上两个图给中的上扬价格均为随机产生，幅度、频率随机。
