@@ -83,6 +83,7 @@ c.	标第价格不变时，有没有一个最优的定投值和频率的组合�
 <img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/5451.47.png" width="400" height="280"> 
 <img src="https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/4944.27.png" width="400" height="280">
 </p>
+
 #### 观察与思考：
 1.	两个实验中的标的价格波动频繁，呈锯齿状，绿色的资产净值在前半程几乎与投资金额没有差别，第一个实验中出现在3-4周时的价格下沉和12周时的上扬几乎对资产没有任何影响，原因很简单，前期的持股（币）数量很低。
 2.	在两个实验的后半程，随着持股（币）数的累积，资产净值开始对价格走势愈发敏感，价格的升降开始在资产净值上带来波动。尤其是第二个实验在36周左右出现了最大幅的下跌，同时也带来了同时期资产的走低，但是幅度比价格下降幅度要小。
