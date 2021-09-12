@@ -22,7 +22,9 @@ Python 3.9
 
 
 
+![Investment vs Asset](https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/figures/7402.37.png)
 
+![Investment vs Asset](https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master/blob/master/collection/8917.24.png)
 
 
 
