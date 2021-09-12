@@ -1,11 +1,11 @@
 # 一根韭菜的定投实验笔记
 
-##缘起
+## 缘起
 下面这张图多次出现在笑来老师的课程中，它清晰展示了在一个大周期过程中，（价格【蓝色线】先跌后涨，呈现一个微笑型，称为一个大周期）投资总额与资产净值的变化情况。
 多次看到这幅图后，我想进一步了解投资总额与资产净值在其它走势中的变化----好奇定投策略在各种各样的走势中如何表现，成为了这篇实验笔记的缘起。
  
 
-##实验方法/工具
+## 实验方法/工具
 实验使用Python 代码生成一段时期的标的价格，假设每周投资一个定值，计算出每周的投资总额及资产净值，最后将价格，投资总额，资产净值三条线同时画出。
 
 IDE: PyCharm, version 2021.2
@@ -15,7 +15,7 @@ Python 3.9
  
 ## 实验过程
 整个过程由三部分组成，每个部分中具体展现了若干个走势，展示在各种浮动中定投策略的结果。每个部分在展示曲线以后，列出了我的观察与思考。
-###第一部分：五种特定走势
+### 第一部分：五种特定走势
 o	持续上涨
 
 
@@ -137,7 +137,7 @@ o	三个&四个大周期
   
 o	更多的大周期
  
-##第三部分：实际标的走势
+## 第三部分：实际标的走势
 o	ETFs:
 	Bitcoin
 	QQQ
@@ -148,17 +148,17 @@ o	公司股：
 	Costco
 	Nvidia
 	McDonald’s
-##总结
-##后续工作
-##代码：https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master
+## 总结
+## 后续工作
+## 代码：https://github.com/AaronZhangAus/Deepdive-on-Regular-Investing-master
 
-##联系方式：
+## 联系方式：
 微信：阿荣（yang__au）
 aaron.zhang.aus@gmail.com
 
  
  
-TOP 24 HIGHEST GAIN CRYPTOS FOR REGULAR INVESTING:
+## TOP 24 HIGHEST GAIN CRYPTOS FOR REGULAR INVESTING:
 1.	DOGE-USD returns 3234.03
 2.	LUNA1-USD returns 2816.71
 3.	SOL1-USD returns 2092.4
@@ -184,7 +184,7 @@ TOP 24 HIGHEST GAIN CRYPTOS FOR REGULAR INVESTING:
 23.	USDT-USD returns 0.06
 24.	USDC-USD returns -0.03
  
-TOP 50 HIGHEST GAIN STOCKS:
+## TOP 50 HIGHEST GAIN STOCKS:
 1.	OAS returns 11779.31
 2.	WKSP returns 2000.1
 3.	ZIVO returns 1596.6
@@ -236,7 +236,7 @@ TOP 50 HIGHEST GAIN STOCKS:
 49.	JYNT returns 179.17
 50.	MMAT returns 173.88
  
-TOP 50 HIGHEST GAIN ETFS:
+## TOP 50 HIGHEST GAIN ETFS:
 1.	BDRY returns 145.35
 2.	BNKU returns 125.59
 3.	FAS returns 90.71
